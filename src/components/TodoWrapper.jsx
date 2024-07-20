@@ -6,7 +6,7 @@ import { EditTodoForm } from "./EditTodoForm";
 
 export const TodoWrapper = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [filterLabel, setFilterLabel] = useState("");
+  const [filterLabel, setFilterLabel] = useState("all");
 
   const [todos, setTodos] = useState(() => {
     const storedTodos = localStorage.getItem("todos");
@@ -64,22 +64,24 @@ export const TodoWrapper = () => {
 
   // Filtered todos based on search query and label
   const filteredTodos = todos.filter(
-    (todo) =>
+    (todo) => 
       todo.task.toLowerCase().includes(searchQuery.toLowerCase()) &&
-      todo.label.toLowerCase().includes(filterLabel.toLowerCase())
+      (filterLabel.toLowerCase() === 'all' || todo.label.toLowerCase() === filterLabel.toLowerCase())
   );
 
   return (
     <div className="TodoWrapper">
       <h1>Task Manager</h1>
+      <div className="search">
       <select
         value={filterLabel}
         onChange={handleFilterChange}
         className="todo-select"
       >
-        <option value="">Alll</option>
-        <option value="on">on</option>
-        <option value="off">off</option>
+        <option value="all">All</option>
+        <option value="normal">Normal</option>
+        <option value="important">Important</option>
+        <option value="very important">Very Important</option>
       </select>
       <input
         type="text"
@@ -87,7 +89,9 @@ export const TodoWrapper = () => {
         onChange={handleSearchChange}
         placeholder="Search tasks..."
         className="todo-input"
+        id="search"
       />
+      </div>
 
       <TodoForm addTodo={addTodo} />
 

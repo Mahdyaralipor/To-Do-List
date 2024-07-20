@@ -8,7 +8,7 @@
 }
 
 body {
-  background: #8758ff;
+  background: #FEFCFB;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,42 +19,47 @@ body {
 }
 
 h1 {
-  color: #fff;
+  color: #FEFCFB;
   margin-bottom: 0.5rem;
   font-size: 1.75rem;
 }
 
 .TodoWrapper {
-  background: #1A1A40;
+  background: #0A1128;
   margin-top: 5rem;
   padding: 2rem;
   border-radius: 5px;
+  box-shadow: 5px 2px 50px -3px rgba(0,0,0,0.75);
 }
 
 .TodoForm {
   width: 100%;
   margin-bottom: 1rem;
+  
+  
 }
 
 .todo-input {
   outline: none;
-  background: none;
-  border: 1px solid #8758ff;
+  background: #1282A2;
+  border: 1px solid #1282A2;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
   width: 300px;
-  color: #fff;
+  color: #FEFCFB;
 }
 
 .todo-input::placeholder {
-  color: #ffffff4d;
+  color: #FEFCFB;
 }
 
 .todo-btn {
-  background: #8758ff;
-  color: #fff;
+  background: #034078;
+  margin-left: 4px;
+  color: #f6f6ff;
   border: none;
+  border-radius: 4px;
   padding: 0.55rem;
   cursor: pointer;
 }
@@ -63,8 +68,8 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #8758ff;
-  color: #fff;
+  background: #034078;
+  color: #f6f6ff ;
   padding: 0.75rem 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
@@ -75,7 +80,7 @@ h1 {
 }
 
 .incompleted {
-  color: #fff;
+  color: #f6f6ff;
   cursor: pointer;
 }
 
@@ -85,26 +90,43 @@ h1 {
   cursor: pointer;
 }
 
-.edit-icon,
+.edit-icon {
+  cursor: pointer;
+  color: #36B37E;
+}
 .delete-icon {
+  color: #FF5630;
   cursor: pointer;
 }
 .todo-select {
   outline: none;
-  background: none;
-  border: 1px solid #8758ff;
+  background: #1282A2;
+  border: 1px solid #1282A2;
+  border-radius: 4px;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1px;
+  margin-right: 4px;
   width: 70px;
   padding-right: 10px;
   padding-top: 7px;
-  color: #8758ff;
+  color: #FEFCFB;
+  font-size: smaller;
+  height: 42px;
+
 }
 .label-tag {
   font-weight: bold;
-  border: 2px solid #1A1A40;
   margin-right: 15px;
   border-radius: 5px;
-  background-color: #1A1A40;
+  color: #1282A2;
+
+}
+#search {
+  width: 84%;
+  margin-bottom: 1px;
+
+}
+.search {
+  margin-bottom: 1px;
 }
