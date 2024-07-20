@@ -107,7 +107,7 @@ h1 {
   margin-top: 1rem;
   margin-bottom: 1px;
   margin-right: 4px;
-  width: 70px;
+  width: fit-content;
   padding-right: 10px;
   padding-top: 7px;
   color: #FEFCFB;
@@ -123,10 +123,40 @@ h1 {
 
 }
 #search {
-  width: 84%;
+  width: 71%;
   margin-bottom: 1px;
 
 }
 .search {
   margin-bottom: 1px;
+}
+.select-edit {
+  outline: none;
+  background: #034078;
+  border: 1px solid #034078;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1px;
+  margin-right: 4px;
+  width: fit-content;
+  padding-right: 10px;
+  padding-top: 7px;
+  color: #FEFCFB;
+  font-size: smaller;
+  height: 42px;
+}
+.input-edit {
+  outline: none;
+  background: #034078;
+  border: 1px solid #034078;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #FEFCFB;
+}
+
+.input-edit::placeholder {
+  color: #FEFCFB;
 }
