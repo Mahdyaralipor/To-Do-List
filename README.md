@@ -16,12 +16,6 @@ Go to the project directory
   cd To-Do-List
 ```
 
-Install dependencies
-
-```bash
-  npm install
-```
-
 Install dependencies And Start the server
 
 ```bash
